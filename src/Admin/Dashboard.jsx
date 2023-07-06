@@ -1,6 +1,5 @@
 import React from 'react'
 import "../pages/styles/commonsec.css"
-import dash from "../assets/images/Screenshot (22).png"
 
 const Dashboard = () => {
   return (
