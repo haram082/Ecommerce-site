@@ -1,0 +1,44 @@
+.billing_form_admin{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    padding: 30px ;
+    border-radius: 10px;
+}
+
+.billing_form_admin h4{
+    border-bottom: 3px solid;
+    color: rgb(210, 230, 140);
+    margin-bottom: 30px;
+}
+
+.add_form__group{
+    display: flex;
+    flex-direction: column;
+}
+.add_form__group span{
+    color: rgb(210, 230, 140);
+}
+
+.tan{
+    background-color: rgb(248, 219, 194);
+
+}
+
+.add_form__group input[type="number"]{
+    width: 100px;
+}
+
+@media screen and (max-width:1100px) {
+    .billing_form_admin{
+        width: 80%;
+        }
+    
+}
+@media screen and (max-width:800px) {
+    .small_input {
+        flex-direction: column;
+    }
+}

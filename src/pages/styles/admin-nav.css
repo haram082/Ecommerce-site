@@ -1,0 +1,143 @@
+.admin__header{
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
+    background-color: rgb(96, 188, 86);
+}
+
+.admin__nav-top{
+    width: 100%;
+    height: 50px;
+}
+
+.logo h2{
+    color: white;
+    font-size: 1rem;
+}
+.logo a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.admin__nav-wrapper-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.admin__nav-top-right img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.admin__nav-top-right{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+    column-gap: 2rem;
+}
+.admin__nav-top-right *{
+    cursor: pointer;
+}
+
+
+
+.input-container {
+    width: 500px;
+    position: relative;
+  }
+  
+  .icon {
+    position: absolute;
+    right: 10px;
+    top: calc(50% + 5px);
+    transform: translateY(calc(-50% - 5px));
+  }
+  
+  .input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    transition: .2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .input:focus {
+    outline: none;
+    border: 0.5px solid black;
+    box-shadow: -5px -5px 0px black;
+  }
+  
+  .input-container:hover > .icon {
+    animation: anim 1s linear infinite;
+  }
+  
+  @keyframes anim {
+    0%,
+    100% {
+      transform: translateY(calc(-50% - 5px)) scale(1);
+    }
+  
+    50% {
+      transform: translateY(calc(-50% - 5px)) scale(1.1);
+    }
+  }
+
+  @media screen and (max-width: 786px) {
+    .input-container{
+      display: none;}
+  }
+
+
+  .admin__menu{
+    width: 100%;
+    height: 70px;
+    line-height: 80px;
+    background-color: rgb(248, 219, 194);
+    border-bottom: 2px solid green;
+  }
+
+  .admin__navigation{
+    text-align: center;
+  }
+  .admin__menu-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2.7rem;
+  }
+  .admin__menu-list .admin__menu-item a{
+    font-weight: 500;
+    padding: 5px 9px;
+  }
+
+  .admin__menu-list .admin__menu-item a:hover{
+    border-bottom: 3px solid teal;
+  }
+.nav__menu-active{
+    background: whitesmoke;
+    font-weight: 700 !important;
+}
+
+
+@media screen and (max-width: 1100px){
+  .admin__menu-list{
+    column-gap: 1rem;
+    }
+  
+}
+@media screen and (max-width: 786px){
+  .admin__menu-list{
+    column-gap: 0.5rem;
+    font-size: 0.6rem;
+    }
+    }

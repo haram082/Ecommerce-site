@@ -1,0 +1,45 @@
+.table tr td img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+td i{
+    cursor: pointer;
+}
+
+td i:hover{
+    color:red;
+}
+
+.continue_shopping{
+    color: rgb(25, 25, 159);
+    font-size: 0.7em;
+}
+
+.continue_shopping:hover{
+    border-bottom: 3px solid;
+}
+
+.checkout__cart{
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.checkout__cart h6,h4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout__cart h4{
+    border-bottom: 2px solid black;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .cart{
+        flex-direction: column;
+    }
+}

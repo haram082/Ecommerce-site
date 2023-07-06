@@ -1,0 +1,20 @@
+.common__section{
+    background: url("../../assets/images/bedroom.jpg") no-repeat center center;
+    background-size: cover;
+    height: 200px;
+}
+
+.common__section h1{
+    color: black;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.dash{
+    background: url("../../assets/images/Screenshot (22).png");
+    background-size: cover;
+    height: 100vh;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 600px;
+}

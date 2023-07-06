@@ -1,0 +1,94 @@
+/* HERO CSS */
+
+.hero__img img{
+     height: 60vh;
+     width: 50vw;
+}
+
+.hero__section{
+     background-color: rgba(149, 223, 155, 0.847);
+     display: flex;
+     justify-content: space-between;
+     padding-left: 100px;
+     padding-bottom: 0px;
+
+     
+}
+.hero__section h2{
+     color: black;
+     font-size: 2.5rem;
+     margin-bottom: 20px; 
+     margin-top: 10px;
+}
+.hero__section p{
+     font-weight: 500;
+     font-size: 1.2rem;
+}
+.hero__content{
+     line-height: 28px;
+     width: 40vw;
+
+}
+
+
+.buy_button {
+     margin-top: 20px;
+     margin-bottom: 20px;
+     width: 200px;
+     height: 60px;
+     background-image: rgba(128, 0, 128, 0.445);
+     border: none;
+     border-radius: 10px;
+     color: rgb(210, 11, 193);
+     font-weight: 600;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 5px;
+     cursor: pointer;
+     box-shadow: 3px 5px 0px rgb(139, 113, 255);
+     transition-duration: .3s;
+   }
+   
+   .cartIcon {
+     width: 14px;
+     height: fit-content;
+   }
+   
+   .cartIcon path {
+     fill: white;
+   }
+   
+   .buy_button:hover {
+     transform: translate(2px ,0px);
+     box-shadow: 0px 1px 0px rgb(139, 113, 255);
+     padding-bottom: 1px;
+   }
+   
+.learn_more{color: blue;}
+.learn_more:hover{border-bottom: 1px solid blue;}
+
+
+
+/* Section  TItles */
+
+.section__title{
+     color: rgba(128, 128, 128, 0.521);
+     font-weight: 600;
+     font-size: 35px;
+     text-align: center;
+     margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+     .hero__img img{
+          display: none;
+     }
+}
+
+
+
+    
+
+
+
