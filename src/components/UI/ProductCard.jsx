@@ -25,7 +25,7 @@ const ProductCard = ({item}) => {
     const navigate = useNavigate()
     const addtoFirestore =(async()=>{
       if (currentUser){
-       await addDoc(collection(db, `users/${currentUser.uid}/cart`),item )
+        await setDoc(doc(db,`users/${currentUser.uid}/cart`, item.id ),item )
       toast.success("Product added")
       }else{
         navigate("login")

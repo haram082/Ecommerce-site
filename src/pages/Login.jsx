@@ -48,8 +48,14 @@ const Login = () => {
 			</div>
 		</FormGroup>
 		<button type="submit" className="sign">Sign in</button>
-		<p className="signup mt-3">Don't have an account?  <Link to="../signup" className="">Sign up</Link>
-	</p>
+		<p className="signup mt-3">Don't have an account?  <Link to="../signup" className="">Sign up</Link></p>
+		<div className='text-start mt-3'>
+		<p>Sample Admin Email: admin1@gmail.com</p>
+		<p>Password: 123456</p>
+		<p>Sample Customer Email: customer_email@gmail.com</p>
+		<p>Sample Password: 123456</p>
+		</div>
+	
 	</Form></>
 }
 	

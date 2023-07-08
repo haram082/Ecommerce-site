@@ -9,7 +9,7 @@ import ReviewForm from './ReviewForm'
 import "./styles/productdetails.css"
 
 import useGetData from '../custom_hooks/useGetData'
-import { doc, getDoc, collection, addDoc, deleteDoc, setDoc, getDocs } from 'firebase/firestore'
+import { doc, getDoc, collection, deleteDoc, setDoc, getDocs } from 'firebase/firestore'
 import { db } from '../firebase.config'
 import useAuth from '../custom_hooks/useAuth'
 
@@ -38,7 +38,7 @@ const ProductDetails = () => {
     if (currentUser){
       const quant = quantity.current.value
     for (let i = 0; i < quant; i++) {
-     await addDoc(collection(db, `users/${currentUser.uid}/cart`),product )
+     await setDoc(doc(db,`users/${currentUser.uid}/cart`, id ),product )
     }
     toast.success("Product added")
   }else{
@@ -117,7 +117,7 @@ const ProductDetails = () => {
     <>
     {loading ? <div className="custom-loader"></div> :
     <>
-    <section className="pd_container">
+    <section className="pd_container p-3">
         <div className="prod_image"><img src={imgUrl} alt="" />
         <span onClick={handlewished} className={wished ? "added_wishlist pd_wishlist" : "add_wishlist pd_wishlist"}><i className="fa fa-heart" aria-hidden="true"/></span>
         </div>
@@ -129,7 +129,7 @@ const ProductDetails = () => {
           <p>{description} </p>
           <p className='text-danger'>{stock} left in Stock !!!</p>
           <span>Quantity: <input type="number" className="quantity" min="1" max="99" defaultValue={1} ref={quantity}/> </span>
-          <div className="buttons d-flex gap-3 mt-4">
+          <div className="buttons d-flex gap-3 py-3">
           <button className="add_to_cart" onClick={addtoFirestore}>
           <span className="button__text">Add To Cart</span>
           <span className="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
