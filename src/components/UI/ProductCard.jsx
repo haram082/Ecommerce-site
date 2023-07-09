@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 // import { useDispatch } from "react-redux"
 // import { cartActions } from "../../redux/cartSlice"
 import { db } from "../../firebase.config";
-import { collection,addDoc, setDoc, doc, deleteDoc, getDoc } from "firebase/firestore";
+import { setDoc, doc, deleteDoc, getDoc } from "firebase/firestore";
 import useAuth from "../../custom_hooks/useAuth"
 
 const ProductCard = ({item}) => {

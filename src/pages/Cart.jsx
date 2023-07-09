@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+
 import "./styles/cart.css"
 import CommonSection from "../components/UI/CommonSection"
 import StripeCheckout from 'react-stripe-checkout'

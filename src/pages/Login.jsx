@@ -17,6 +17,7 @@ const Login = () => {
 		setLoading(true)
 		try {
 			const userCredential = await signInWithEmailAndPassword(auth, email, password)
+			//eslint-disable-line
 			const user = userCredential.user
 			toast.success('Logged in successfully')
 			setLoading(false)

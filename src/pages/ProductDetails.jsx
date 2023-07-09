@@ -62,7 +62,9 @@ const ProductDetails = () => {
       setAvgRating(avg)
     }
     getReviews()
+    //eslint-disable-line
   }, [])
+
 
 
   // const dispatch = useDispatch()
