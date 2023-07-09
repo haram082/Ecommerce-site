@@ -62,8 +62,7 @@ const ProductDetails = () => {
       setAvgRating(avg)
     }
     getReviews()
-    //eslint-disable-line
-  }, [])
+  }, [id, reveiws])
 
 
 
