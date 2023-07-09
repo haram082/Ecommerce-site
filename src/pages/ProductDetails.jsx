@@ -62,7 +62,7 @@ const ProductDetails = () => {
       setAvgRating(avg)
     }
     getReviews()
-  }, [id, reveiws])
+  }, [id])
 
 
 
