@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.59276fde.css",
+    "main.js": "/static/js/main.a48679c8.js",
+    "static/media/Screenshot (22).png": "/static/media/Screenshot (22).77a50ed05045f5e73266.png",
+    "static/media/eco-logo.png": "/static/media/eco-logo.6dc1d70d1e4de575ca6c.png",
+    "static/media/bedroom.jpg": "/static/media/bedroom.3c8a3a04c8ea009f960e.jpg",
+    "static/media/hero_img.png": "/static/media/hero_img.1dcb214159755449d8a5.png",
+    "index.html": "/index.html",
+    "main.59276fde.css.map": "/static/css/main.59276fde.css.map",
+    "main.a48679c8.js.map": "/static/js/main.a48679c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59276fde.css",
+    "static/js/main.a48679c8.js"
+  ]
+}
