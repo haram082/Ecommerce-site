@@ -148,17 +148,17 @@ const ProductDetails = () => {
           <span className="button__text">Add To Cart</span>
           <span className="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
         </button>
-        <StripeCheckout
-          stripeKey='pk_test_51NQhHmCsJIIWTEMRtnNDXyd5AVsBF87mIYsAxOAWA1RfwojbcY2KcV3iVlHdmJzrcaEe90me4Mco70qxeHbL6PzV00ZFoeonD8'
-          name='Haram Shop'
-          amount={(parseInt(price) * 100 *0.0725).toFixed(2)}
-          description={`Your Total plus Tax is $${(parseInt(price) * 100 *0.0725).toFixed(2) }`}
-          token= {payment}
-          email = {currentUser.email}
-          shippingAddress
-          billingAddress={false}>          
-         <button className='buy_now'>Buy Now</button>
-            </StripeCheckout>
+     {currentUser ? <StripeCheckout
+        stripeKey='pk_test_51NQhHmCsJIIWTEMRtnNDXyd5AVsBF87mIYsAxOAWA1RfwojbcY2KcV3iVlHdmJzrcaEe90me4Mco70qxeHbL6PzV00ZFoeonD8'
+        name='Haram Shop'
+        amount={(parseInt(price) * 100 *0.0725).toFixed(2)}
+        description={`Your Total plus Tax is $${(parseInt(price) * 100 *0.0725).toFixed(2) }`}
+        token= {payment}
+        email = {currentUser.email}
+        shippingAddress
+        billingAddress={false}>          
+        <button className='buy_now'>Buy Now</button>
+          </StripeCheckout>: <button className='buy_now' onClick={navigate("../login")}>Buy Now</button>}
           </div>
         
           </div>
