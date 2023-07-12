@@ -16,7 +16,7 @@ const Login = () => {
 		e.preventDefault()
 		setLoading(true)
 		try {
-			const userCredential = await signInWithEmailAndPassword(auth, email, password)
+			await signInWithEmailAndPassword(auth, email, password)
 			toast.success('Logged in successfully')
 			setLoading(false)
 			navigate("../home")

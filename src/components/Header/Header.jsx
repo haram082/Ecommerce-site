@@ -40,7 +40,6 @@ const Header = () => {
   const[admin, setAdmin] = useState(false)
 
   const { currentUser } = useAuth()
-  console.log(admin)
   
 
   useEffect(()=>{
@@ -63,6 +62,8 @@ const Header = () => {
     signOut(auth).then(()=>{
       toast.success("Logged Out")
       setAdmin(false)
+      setCart([])
+      setWishlist([])
     }).catch(err=>{
       toast.error(err.message)
     })

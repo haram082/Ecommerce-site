@@ -33,6 +33,7 @@ const ProductDetails = () => {
     getProduct()
   },[id])
   const {imgUrl, productName,price, description, shortDesc, stock, category }= product
+  const tax= price*0.0725
 
   const navigate = useNavigate
   const quantity = useRef(1)
@@ -66,7 +67,7 @@ const ProductDetails = () => {
       setAvgRating(avg);
     };
     getReviews();
-  }, []);
+  }, [id]);
 
 
 
@@ -118,7 +119,7 @@ const ProductDetails = () => {
 
   const payment = async(token) => {
     const data = {
-      amount: parseInt(price) * 100 *0.0725,
+      amount: parseInt(price) * 100 + parseInt(tax) * 100,
       token: token,
     };
     await axios.post("http://localhost:8000/pay", data)
@@ -151,14 +152,14 @@ const ProductDetails = () => {
      {currentUser ? <StripeCheckout
         stripeKey='pk_test_51NQhHmCsJIIWTEMRtnNDXyd5AVsBF87mIYsAxOAWA1RfwojbcY2KcV3iVlHdmJzrcaEe90me4Mco70qxeHbL6PzV00ZFoeonD8'
         name='Haram Shop'
-        amount={(parseInt(price) * 100 *0.0725).toFixed(2)}
-        description={`Your Total plus Tax is $${(parseInt(price) * 100 *0.0725).toFixed(2) }`}
+        amount={(parseInt(price) * 100 +tax*100).toFixed(2)}
+        description={`Your Total plus Tax is $${(parseInt(price)+ tax ).toFixed(2) }`}
         token= {payment}
         email = {currentUser.email}
         shippingAddress
         billingAddress={false}>          
         <button className='buy_now'>Buy Now</button>
-          </StripeCheckout>: <button className='buy_now' onClick={navigate("../login")}>Buy Now</button>}
+          </StripeCheckout>: <button className='buy_now' onClick={()=>navigate("../login")}>Buy Now</button>}
           </div>
         
           </div>

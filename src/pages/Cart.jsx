@@ -41,7 +41,7 @@ const Cart = () => {
 
   const payment = async(token) => {
     const data = {
-      amount: parseInt(totalCost * 100 + tax),
+      amount: parseInt(totalCost * 100 + tax*100),
       token: token,
     };
     await axios.post("http://localhost:8000/pay", data)
@@ -91,7 +91,7 @@ const Cart = () => {
           <StripeCheckout
           stripeKey='pk_test_51NQhHmCsJIIWTEMRtnNDXyd5AVsBF87mIYsAxOAWA1RfwojbcY2KcV3iVlHdmJzrcaEe90me4Mco70qxeHbL6PzV00ZFoeonD8'
           name='Haram Shop'
-          amount={parseInt(totalCost * 100 + tax)}
+          amount={parseInt(totalCost * 100 + tax*100)}
           description={`Your Total is $${(totalCost+ tax).toFixed(2) }`}
           token= {payment}
           email = {currentUser.email}
