@@ -12,6 +12,7 @@ import { deleteDoc, doc, setDoc } from 'firebase/firestore'
 import { db } from '../firebase.config'
 import useGetData from '../custom_hooks/useGetData'
 import useAuth from '../custom_hooks/useAuth'
+import { toast } from "react-toastify"
 
 
 
@@ -46,7 +47,9 @@ const Cart = () => {
     await axios.post("http://localhost:8000/pay", data)
     .then(addOrder())
     .then(emptyCart())
-    .then(navigate("../orders"));
+    .then(toast.success("Payment Successful"))
+    .then(navigate("../orders"))
+    .catch((err) =>toast.error("Payment Failed"));
   };
 
   // const cartItems = useSelector(state=> state.cart.cartItems)
@@ -93,11 +96,8 @@ const Cart = () => {
           token= {payment}
           email = {currentUser.email}
           shippingAddress
-          billingAddress={false}
-            
-      >
-            
-    <button className='buy_btn w-100'><span>Proceed to Checkout</span></button>
+          billingAddress={false}>
+          <button className='buy_btn w-100'><span>Proceed to Checkout</span></button>
             </StripeCheckout>
                 </div>
 
